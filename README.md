@@ -6,9 +6,12 @@ A TextTiling-based algorithm for text segmentation (aka topic segmentation) that
 
 Download this repository, unzip it and move the working directory into it.
 
-To download the required libraries, either pip can be used directly to install them on the python installation of the current environment, or a virtual environment can be created with conda. The current installation assumes no GPU available by default: to install pytorch with GPU, refer to [this page](https://pytorch.org/get-started/locally/).
+To download the required libraries, either pip can be used directly to install them on the python installation of the current environment, or a virtual environment can be created with conda. The current installation assumes no GPU available by default: to install pytorch with GPU, refer to [this page](https://pytorch.org/get-started/locally/). Also, if using GPU and you want to use Universal Sentence Encoder, than you will need to install tensorflow-gpu by running the following in the environment created as explained below:
+```
+pip install tensorflow-gpu
+```
 
-In both cases, open your command prompt (anaconda prompt is preferred) and do one of the following.
+In both cases, first open your terminal and do one of the following.
 
 Installing required libraries with pip:
 ```
@@ -85,5 +88,9 @@ This script extract the most important n sentences from each segment, so as to g
 ### semantic_search.py
 This script is the same as summarize.py, but instead of returning the top sentences per segment it averages them and compare to a query input by the user (a prompt asks for it when the script is called), so as to return the segment that is the most similar to the query. In this case then the -nt parameter specifies how many sentences are averaged to represent each segment, whereas a very large number will result in all the sentences be averaged and, usually, better performance (but slightly longer runtime).
 
+### fit.py
+The repository enables also the automatic search of best window and threshold values among a set of candidates, given a held-out corpus. For the parameters so found to be useful, remember that the data at inference time should be similar (e.g. from the same domain) as the ones used to find the best parameters.
+
+By calling the fit.py script, the automatic search for the best parameters is performed, based on the parameters.json file that specifies, among the other things, the sentence encoder to be used and the set of candidates for the window value and for the threshold value. You can change the parameters.json file according to your needs or otherwise point the script to an alternative json file having same structure by passing its location to the -hyper argument of the script.
 
 N.B. Please note that the script for segmentation will need to download the sentence encoders the first time in which it is run with a specific encoder and this might take a while. Subsequent uses with the same encoder, instead, should run faster. 
