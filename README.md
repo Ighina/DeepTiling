@@ -20,6 +20,7 @@ Creating a virtual-environment where to install required libraries with conda:
 conda create -n deeptiling --file requirements.txt
 ```
 
+
 After which the environment can be activated with:
 ```
 conda activate deeptiling
@@ -28,6 +29,16 @@ And deactivated with:
 ```
 conda deactivate deeptiling
 ```
+
+If you run into errors because conda can't install certain libraries, then, install the libraries directly in the virtual environment by running the following block of codes:
+
+```
+conda create -n deeptiling
+source activate deeptiling
+pip install -r requirements.txt
+```
+
+
 ## Execute the scripts
 
 The repository contains three main script: *segment.py*, *summarize.py" and *semantic_search.py*.
