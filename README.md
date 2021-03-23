@@ -48,7 +48,7 @@ Or by looking into the scripts themselves.
 
 The results are stored in an output directory that can be specified by the user (default is "results").
 
-### Segment.py
+### segment.py
 This script is the main one and uses the deeptiling algorithm to segment the given texts into topically coherent extracts, stored in the segments folder inside the specified output directory (default is "results").
 A description of all the options can be accessed as described above. The main arguments are:
 - -data: the folder containing the documents to be segmented (required)
@@ -58,4 +58,10 @@ A description of all the options can be accessed as described above. The main ar
 - -cfg: the location of the configuration file that can be used to run the program without the need of specifying the parameters on the command line (default: parameters.json)
 - -enc: the sentence encoder to be used. All sentence encoders from sentence_transformers library plus the DAN encoder from Universal Sentence Encoder models are available. Default is None and, if not passed in the command line, then the programme will look for it as specified in the json configuration file.
 - -od: the directory where to store the results. Default is results. If any other name is passed, the programme will create the folder and, inside, will create a segments folder where to store the segmentation results and an embeddings folder where to store the computed sentence embeddings.
-- =cat: whether to concatenate all the provided documents in a single document or not. Default is False.
+- -cat: whether to concatenate all the provided documents in a single document or not. Default is False.
+
+### summarize.py
+This script extract the most important n sentences from each segment, so as to give a summary of the segment itself. The algorithm uses LexRank: please look at the relative github page quoted in the LexRank script for further details on that. If the input documents haven't been segmented yet when this script is called, the segmentation process defined in segment.py will run automatically. Therefore, all arguments are the same as segment.py but for the argument -nt specifying the number of sentences to extract (default is 1).
+
+### semantic_search.py
+This script is the same as summarize.py, but instead of returning the top sentences per segment it averages them and compare to a query input by the user (a prompt asks for it when the script is called), so as to return the segment that is the most similar to the query. In this case then the -nt parameter specifies how many sentences are averaged to represent each segment, whereas a very large number will result in all the sentences be averaged and, usually, better performance (but slightly longer runtime).
