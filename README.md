@@ -91,6 +91,10 @@ This script is the same as summarize.py, but instead of returning the top senten
 ### fit.py
 The repository enables also the automatic search of best window and threshold values among a set of candidates, given a held-out corpus. For the parameters so found to be useful, remember that the data at inference time should be similar (e.g. from the same domain) as the ones used to find the best parameters.
 
-By calling the fit.py script, the automatic search for the best parameters is performed, based on the parameters.json file that specifies, among the other things, the sentence encoder to be used and the set of candidates for the window value and for the threshold value. You can change the parameters.json file according to your needs or otherwise point the script to an alternative json file having same structure by passing its location to the -hyper argument of the script.
+By calling the fit.py script, the automatic search for the best parameters is performed, based on the parameters.json file that specifies, among the other things, the sentence encoder to be used and the set of candidates for the window value and for the threshold value. You can change the parameters.json file according to your needs or otherwise point the script to an alternative json file having same structure by passing its location to the -hyper argument of the script. As a compulsory argument the script requires the training data to be provided after the argument --training_data. 
+e.g.
+```
+python fit.py --training_data location_of_the_data_used_to_find_optimal_parameters
+```
 
 N.B. Please note that the script for segmentation will need to download the sentence encoders the first time in which it is run with a specific encoder and this might take a while. Subsequent uses with the same encoder, instead, should run faster. 
