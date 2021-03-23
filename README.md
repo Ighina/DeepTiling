@@ -38,6 +38,14 @@ source activate deeptiling
 pip install -r requirements.txt
 ```
 
+There might be problems to install tensorflow if your python version is greater than 3.8, in that case run the following block of codes:
+```
+conda create -n deeptiling
+source activate deeptiling
+conda install python=3.7
+pip install -r requirements.txt
+```
+
 
 ## Execute the scripts
 
