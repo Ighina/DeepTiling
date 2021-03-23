@@ -4,11 +4,10 @@ nltk
 numpy
 pandas>=0.25.3
 pathlib2
-python>=3.7.5
 scipy
 segeval
 sentence-transformers
-skleran
+sklearn
 tensorboard_logger
 tensorflow
 tensorflow_hub
