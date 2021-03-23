@@ -1,0 +1,221 @@
+========,1,preface.
+Vanadium is a chemical element with symbol V and atomic number 23.
+It is a hard, silvery grey, ductile, and malleable transition metal.
+The elemental metal is rarely found in nature, but once isolated artificially, the formation of an oxide layer (passivation) stabilizes the free metal somewhat against further oxidation.
+Andrés Manuel del Río discovered compounds of vanadium in 1801 in Mexico by analyzing a new lead-bearing mineral he called "brown lead", and presumed its qualities were due to the presence of a new element, which he named "erythronium" (derived from Greek for "red") since, upon heating, most of the salts turned red.
+Four years later, however, he was (erroneously) convinced by other scientists that erythronium was identical to chromium.
+Chlorides of vanadium were generated in 1830 by Nils Gabriel Sefström who thereby proved that a new element was involved, which he named "vanadium" after the Scandinavian goddess of beauty and fertility, Vanadís (Freyja).
+Both names were attributed to the wide range of colors found in vanadium compounds.
+Del Rio's lead mineral was later renamed vanadinite for its vanadium content.
+In 1867 Henry Enfield Roscoe obtained the pure element.
+Vanadium occurs naturally in about 65 different minerals and in fossil fuel deposits.
+It is produced in China and Russia from steel smelter slag; other countries produce it either from the flue dust of heavy oil, or as a byproduct of uranium mining.
+It is mainly used to produce specialty steel alloys such as high-speed tool steels.
+The most important industrial vanadium compound, vanadium pentoxide, is used as a catalyst for the production of sulfuric acid.
+Large amounts of vanadium ions are found in a few organisms, possibly as a toxin.
+The oxide and some other salts of vanadium have moderate toxicity.
+Particularly in the ocean, vanadium is used by some life forms as an active center of enzymes, such as the vanadium bromoperoxidase of some ocean algae.
+========,2,History.
+Vanadium was discovered by Andrés Manuel del Río, a Spanish-Mexican mineralogist, in 1801.
+Del Río extracted the element from a sample of Mexican "brown lead" ore, later named vanadinite.
+He found that its salts exhibit a wide variety of colors, and as a result he named the element "panchromium" (Greek: παγχρώμιο "all colors").
+Later, Del Río renamed the element "erythronium" (Greek: ερυθρός "red") because most of the salts turned red upon heating.
+In 1805, the French chemist Hippolyte Victor Collet-Descotils, backed by del Río's friend Baron Alexander von Humboldt, incorrectly declared that del Río's new element was only an impure sample of chromium.
+Del Río accepted Collet-Descotils' statement and retracted his claim.
+In 1831, the Swedish chemist Nils Gabriel Sefström rediscovered the element in a new oxide he found while working with iron ores.
+Later that same year, Friedrich Wöhler confirmed del Río's earlier work.
+Sefström chose a name beginning with V, which had not been assigned to any element yet.
+He called the element "vanadium" after Old Norse "Vanadís" (another name for the Norse Vanr goddess Freyja, whose attributes include beauty and fertility), because of the many beautifully colored chemical compounds it produces.
+In 1831, the geologist George William Featherstonhaugh suggested that vanadium should be renamed "rionium" after del Río, but this suggestion was not followed.
+The isolation of vanadium metal proved difficult.
+In 1831, Berzelius reported the production of the metal, but Henry Enfield Roscoe showed that Berzelius had in fact produced the nitride, vanadium nitride (VN).
+Roscoe eventually produced the metal in 1867 by reduction of vanadium(II) chloride, VCl, with hydrogen.
+In 1927, pure vanadium was produced by reducing vanadium pentoxide with calcium.
+The first large-scale industrial use of vanadium was in the steel alloy chassis of the Ford Model T, inspired by French race cars.
+Vanadium steel allowed for reduced weight while simultaneously increasing tensile strength (ca.
+German chemist Martin Henze discovered vanadium in the blood cells (or coelomic cells) of Ascidiacea (sea squirts) in 1911.
+========,2,Characteristics.
+Vanadium is a medium-hard, ductile, steel-blue metal.
+Some sources describe vanadium as "soft", perhaps because it is ductile, malleable and not brittle.
+Vanadium is harder than most metals and steels (see Hardnesses of the elements (data page) and iron).
+It has good resistance to corrosion and it is stable against alkalis and sulfuric and hydrochloric acids.
+It is oxidized in air at about 933 K (660 °C, 1220 °F), although an oxide passivation layer forms even at room temperature.
+========,3,Isotopes.
+Naturally occurring vanadium is composed of one stable isotope, V, and one radioactive isotope, V. The latter has a half-life of 1.5×10 years and a natural abundance of 0.25%.
+V has a nuclear spin of 7/2, which is useful for NMR spectroscopy.
+Twenty-four artificial radioisotopes have been characterized, ranging in mass number from 40 to 65.
+The most stable of these isotopes are V with a half-life of 330 days, and V with a half-life of 16.0 days.
+The remaining radioactive isotopes have half-lives shorter than an hour, most below 10 seconds.
+At least four isotopes have metastable excited states.
+Electron capture is the main decay mode for isotopes lighter than V. For the heavier ones, the most common mode is beta decay.
+The electron capture reactions lead to the formation of element 22 (titanium) isotopes, while beta decay leads to element 24 (chromium) isotopes.
+========,2,Chemistry.
+The chemistry of vanadium is noteworthy for the accessibility of the four adjacent oxidation states 2-5.
+In aqueous solution, vanadium forms metal aquo complexes of which the colours are lilac [V(HO)], green [V(HO)], blue [VO(HO)], yellow VO.
+Vanadium(II) compounds are reducing agents, and vanadium(V) compounds are oxidizing agents.
+Vanadium(IV) compounds often exist as vanadyl derivatives, which contain the VO center.
+Ammonium vanadate(V) (NHVO) can be successively reduced with elemental zinc to obtain the different colors of vanadium in these four oxidation states.
+Lower oxidation states occur in compounds such as V(CO), and substituted derivatives.
+The most commercially important compound is vanadium pentoxide.
+It is used as a catalyst for the production of sulfuric acid.
+This compound oxidizes sulfur dioxide () to the trioxide ().
+In this redox reaction, sulfur is oxidized from +4 to +6, and vanadium is reduced from +5 to +4:
+The catalyst is regenerated by oxidation with air:
+Similar oxidations are used in the production of maleic anhydride, phthalic anhydride, and several other bulk organic compounds.
+The vanadium redox battery utilizes all four oxidation states; one electrode uses the +5/+4 couple and the other uses the +3/+2 couple.
+Conversion of these oxidation states is illustrated by the reduction of a strongly acidic solution of a vanadium(V) compound with zinc dust or amalgam.
+The initial yellow color characteristic of the pervanadyl ion [VO(HO)] is replaced by the blue color of [VO(HO)], followed by the green color of [V(HO)] and then the violet color of [V(HO)].
+========,3,Oxyanions.
+In aqueous solution, vanadium(V) forms an extensive family of oxyanions.
+The interrelationships in this family are described by the predominance diagram, which shows at least 11 species, depending on pH and concentration.
+The tetrahedral orthovanadate ion, , is the principal species present at pH 12-14.
+Similar in size and charge to phosphorus(V), vanadium(V) also parallels its chemistry and crystallography.
+Orthovanadate V is used in protein crystallography to study the biochemistry of phosphate.
+The tetrathiovanadate [VS] is analogous to the orthovanadate ion.
+At lower pH's, the monomer [HVO] and dimer [VO] are formed, with the monomer predominant at vanadium concentration of less than c. 10M (pV > 2, where pV is equal to the minus value of the logarithm of the total vanadium concentration/M).
+The formation of the divanadate ion is analogous to the formation of the dichromate ion.
+As the pH is reduced, further protonation and condensation to polyvanadates occur: at pH 4-6 [HVO] is predominant at pV greater than ca.
+4, while at higher concentrations trimers and tetramers are formed.
+Between pH 2-4 decavanadate predominates, its formation from orthovanadate is represented by this condensation reaction:
+In decavanadate, each V(V) center is surrounded by six oxide ligands.
+Vanadic acid, HVO exists only at very low concentrations because protonation of the tetrahedral species [HVO] results in the preferential formation of the octahedral [VO(HO)] species.
+In strongly acidic solutions, pH<2.
+[VO(HO)] is the predominant species, while the oxide VO precipitates from solution at high concentrations.
+The oxide is formally the inorganic anhydride of vanadic acid.
+The structures of many vanadate compounds have been determined by X-ray crystallography.
+The Pourbaix diagram for vanadium in water, which shows the redox potentials between various vanadium species in different oxidation states, is also complex.
+Vanadium(V) forms various peroxo complexes, most notably in the active site of the vanadium-containing bromoperoxidase enzymes.
+The species VO(O)(HO) is stable in acidic solutions.
+In alkaline solutions, species with 2, 3 and 4 peroxide groups are known; the last forms violet salts with the formula MV(O) nHO (M = Li, Na, etc.
+), in which the vanadium has an 8-coordinate dodecahedral structure.
+========,3,Halide derivatives.
+Twelve binary halides, compounds with the formula VX (n=2..5), are known.
+VI, VCl, VBr, and VI do not exist or are extremely unstable.
+In combination with other reagents, VCl is used as a catalyst for polymerization of dienes.
+Like all binary halides, those of vanadium are Lewis acidic, especially those of V(IV) and V(V).
+Many of the halides form octahedral complexes with the formula VXL (X = halide; L = other ligand).
+Many vanadium oxyhalides (formula VOX) are known.
+The oxytrichloride and oxytrifluoride (VOCl and VOF) are the most widely studied.
+Akin to POCl, they are volatile, adopt tetrahedral structures in the gas phase, and are Lewis acidic.
+========,3,Coordination compounds.
+Complexes of vanadium(II) and (III) are relatively exchange inert and reducing.
+Those of V(IV) and V(V) are oxidants.
+Vanadium ion is rather large and some complexes achieve coordination numbers greater than 6, as is the case in [V(CN)].
+Oxovanadium(V) also forms 7 coordinate coordination complexes with tetradentate ligands and peroxides and these complexes are used for oxidative brominations and thioether oxidations.
+The coordination chemistry of V is dominated by the vanadyl center, VO, which binds four other ligands strongly and one weakly (the one trans to the vanadyl center).
+An example is vanadyl acetylacetonate (V(O)(OCH)).
+In this complex, the vanadium is 5-coordinate, square pyramidal, meaning that a sixth ligand, such as pyridine, may be attached, though the association constant of this process is small.
+Many 5-coordinate vanadyl complexes have a trigonal bypyramidal geometry, such as VOCl(NMe).
+The coordination chemistry of V is dominated by the relatively stable dioxovanadium coordination complexes which are often formed by aerial oxidation of the vanadium(IV) precursors indicating the stability of the +5 oxidation state and ease of interconversion between the +4 and +5 states.
+========,3,Organometallic compounds.
+Organometallic chemistry of vanadium is well developed, although it has mainly only academic significance.
+Vanadocene dichloride is a versatile starting reagent and even finds some applications in organic chemistry.
+Vanadium carbonyl, V(CO), is a rare example of a paramagnetic metal carbonyl.
+Reduction yields V (isoelectronic with Cr(CO)), which may be further reduced with sodium in liquid ammonia to yield V (isoelectronic with Fe(CO)).
+========,2,Occurrence.
+========,3,Universe.
+The cosmic abundance of vanadium in the universe is 0.0001%, making the element nearly as common as copper or zinc.
+Vanadium is detected spectroscopically in light from the Sun and sometimes in the light from other stars.
+========,3,Earth's crust.
+Vanadium is the 20th most abundant element in the earth's crust; metallic vanadium is rare in nature (known as the mineral vanadium, native vanadium), but vanadium compounds occur naturally in about 65 different minerals.
+Economically significant examples include patronite (VS), vanadinite (), and carnotite ().
+Much of the world's vanadium production is sourced from vanadium-bearing magnetite found in ultramafic gabbro bodies.
+Vanadium is mined mostly in South Africa, north-western China, and eastern Russia.
+In 2013 these three countries mined more than 97% of the 79,000 tonnes of produced vanadium.
+Vanadium is also present in bauxite and in deposits of crude oil, coal, oil shale and tar sands.
+In crude oil, concentrations up to 1200 ppm have been reported.
+When such oil products are burned, traces of vanadium may cause corrosion in engines and boilers.
+An estimated 110,000 tonnes of vanadium per year are released into the atmosphere by burning fossil fuels.
+========,3,Water.
+The vanadyl ion is abundant in seawater, having an average concentration of 30 nM.
+Some mineral water springs also contain the ion in high concentrations.
+For example, springs near Mount Fuji contain as much as 54 μg per liter.
+========,2,Production.
+Most vanadium is used as a steel alloy called ferrovanadium.
+Ferrovanadium is produced directly by reducing a mixture of vanadium oxide, iron oxides and iron in an electric furnace.
+The vanadium ends up in pig iron produced from vanadium-bearing magnetite.
+Depending on the ore used, the slag contains up to 25% of vanadium.
+Vanadium metal is obtained by a multistep process that begins with the roasting of crushed ore with NaCl or NaCO at about 850 °C to give sodium metavanadate (NaVO).
+An aqueous extract of this solid is acidified to give "red cake", a polyvanadate salt, which is reduced with calcium metal.
+As an alternative for small-scale production, vanadium pentoxide is reduced with hydrogen or magnesium.
+Many other methods are also in use, in all of which vanadium is produced as a byproduct of other processes.
+Purification of vanadium is possible by the crystal bar process developed by Anton Eduard van Arkel and Jan Hendrik de Boer in 1925.
+It involves the formation of the metal iodide, in this example vanadium(III) iodide, and the subsequent decomposition to yield pure metal.
+========,2,Applications.
+========,3,Alloys.
+Approximately 85% of vanadium produced is used as ferrovanadium or as a steel additive.
+The considerable increase of strength in steel containing small amounts of vanadium was discovered in the early 20th century.
+Vanadium forms stable nitrides and carbides, resulting in a significant increase in the strength of steel.
+From that time on, vanadium steel was used for applications in axles, bicycle frames, crankshafts, gears, and other critical components.
+There are two groups of vanadium steel alloys.
+Vanadium high-carbon steel alloys contain 0.15% to 0.25% vanadium, and high-speed tool steels (HSS) have a vanadium content of 1% to 5%.
+For high-speed tool steels, a hardness above HRC 60 can be achieved.
+HSS steel is used in surgical instruments and tools.
+Powder-metallurgic alloys contain up to 18% percent vanadium.
+The high content of vanadium carbides in those alloys increases wear resistance significantly.
+One application for those alloys is tools and knives.
+Vanadium stabilizes the beta form of titanium and increases the strength and temperature stability of titanium.
+Mixed with aluminium in titanium alloys, it is used in jet engines, high-speed airframes and dental implants.
+The most common alloy for seamless tubing is Titanium 3/2.5, the titanium alloy of choice in the aerospace, defense and bicycle industries.
+Another common alloy, primarily produced in sheets, is Titanium 6AL-4V, a titanium alloy with 6% aluminium and 4% vanadium.
+Several vanadium alloys show superconducting behavior.
+The first A15 phase superconductor was a vanadium compound, VSi, which was discovered in 1952.
+Vanadium-gallium tape is used in superconducting magnets (17.5 teslas or 175,000 gauss).
+The structure of the superconducting A15 phase of VGa is similar to that of the more common NbSn and NbTi.
+It has been proposed that a small amount, 40 to 270 ppm, of vanadium in Wootz steel and Damascus steel significantly improved the strength of the product, though the source of the vanadium is unclear.
+========,3,Other uses.
+Vanadium foil is used in cladding titanium to steel because it is compatible with both iron and titanium.
+The moderate thermal neutron-capture cross-section and the short half-life of the isotopes produced by neutron capture makes vanadium a suitable material for the inner structure of a fusion reactor.
+The most common oxide of vanadium, vanadium pentoxide VO, is used as a catalyst in manufacturing sulfuric acid by the contact process and as an oxidizer in maleic anhydride production.
+Vanadium pentoxide is used in ceramics.
+Vanadium is an important component of mixed metal oxide catalysts used in the oxidation of propane and propylene to acrolein, acrylic acid or the ammoxidation of propylene to acrylonitrile.
+In service, the oxidation state of vanadium changes dynamically and reversibly with the oxygen and the steam content of the reacting feed mixture.
+Another oxide of vanadium, vanadium dioxide VO, is used in the production of glass coatings, which blocks infrared radiation (and not visible light) at a specific temperature.
+Vanadium oxide can be used to induce color centers in corundum to create simulated alexandrite jewelry, although alexandrite in nature is a chrysoberyl.
+The Vanadium redox battery, a type of flow battery, is an electrochemical cell consisting of aqueous vanadium ions in different oxidation states.
+Batteries of the type were first proposed in the 1930s and developed commercially from the 1980s onwards.
+Cells use +5 and +2 formal oxidization state ions, and (as of 2016) are used commercially for small scale (c. 0.1 - 10 MW, 0.1 - 100 GJ) grid energy storage.
+Vanadate can be used for protecting steel against rust and corrosion by conversion coating.
+========,4,Proposed.
+Lithium vanadium oxide has been proposed for use as a high energy density anode for lithium ion batteries, at 745 Wh/L when paired with a lithium cobalt oxide cathode.
+Vanadium phosphates have been proposed as the cathode in the Lithium Vanadium Phosphate Battery, another type of lithium ion battery.
+========,2,Biological role.
+Vanadium plays a limited role in human biology.
+It is more important in marine environments than terrestrial.
+========,3,Vanadoenzymes.
+A number of species of marine algae produce vanadium bromoperoxidase as well as the closely related chloroperoxidase (which may use a heme or vanadium cofactor) and iodoperoxidases.
+The bromoperoxidase produces an estimated 1–2 million tons of bromoform and 56,000 tons of bromomethane annually.
+Most naturally occurring organobromine compounds are produced by this enzyme, catalyzing the following reaction (R-H is hydrocarbon substrate):
+A vanadium nitrogenase is used by some nitrogen-fixing micro-organisms, such as "Azotobacter".
+In this role, vanadium replaces more common molybdenum or iron, and gives the nitrogenase slightly different properties.
+========,3,Vanadium accumulation in tunicates and ascidians.
+Vanadium is essential to ascidians and tunicates, where it is stored in the highly acidified vacuoles of certain blood cell types, designated "vanadocytes".
+Vanabins (vanadium binding proteins) have been identified in the cytoplasm of such cells.
+The concentration of vanadium in the blood of ascidians is as much as ten million times higher than the surrounding seawater, which normally contains 1 to 2 µg/l.
+The function of this vanadium concentration system and these vanadium-bearing proteins is still unknown, but the vanadocytes are later deposited just under the outer surface of the tunic where they may deter predation.
+========,3,Fungi.
+"Amanita muscaria" and related species of macrofungi accumulate vanadium (up to 500 mg/kg in dry weight).
+Vanadium is present in the coordination complex amavadin in fungal fruit-bodies.
+The biological importance of the accumulation is unknown.
+Toxic or peroxidase enzyme functions have been suggested.
+========,3,Mammals and birds.
+Deficiencies in vanadium result in reduced growth and impaired reproduction in rats and chickens.
+Vanadium is a relatively controversial dietary supplement, used primarily for increasing insulin sensitivity and body-building.
+Whether it works for the latter purpose has not been proven; some evidence suggests that athletes who take it are merely experiencing a placebo effect.
+Vanadyl sulfate may improve glucose control in people with type 2 diabetes.
+Decavanadate and oxovanadates appear to play a role in a variety of biochemical processes, such as those relating to oxidative stress.
+========,2,Safety.
+All vanadium compounds should be considered toxic.
+Tetravalent VOSO has been reported to be at least 5 times more toxic than trivalent VO.
+The Occupational Safety and Health Administration (OSHA) has set an exposure limit of 0.05 mg/m for vanadium pentoxide dust and 0.1 mg/m for vanadium pentoxide fumes in workplace air for an 8-hour workday, 40-hour work week.
+The National Institute for Occupational Safety and Health (NIOSH) has recommended that 35 mg/m of vanadium be considered immediately dangerous to life and health, that is, likely to cause permanent health problems or death.
+Vanadium compounds are poorly absorbed through the gastrointestinal system.
+Inhalation of vanadium and vanadium compounds results primarily in adverse effects on the respiratory system.
+Quantitative data are, however, insufficient to derive a subchronic or chronic inhalation reference dose.
+Other effects have been reported after oral or inhalation exposures on blood parameters, liver, neurological development, and other organs in rats.
+There is little evidence that vanadium or vanadium compounds are reproductive toxins or teratogens.
+Vanadium pentoxide was reported to be carcinogenic in male rats and in male and female mice by inhalation in an NTP study, although the interpretation of the results has recently been disputed.
+The carcinogenicity of vanadium has not been determined by the United States Environmental Protection Agency.
+Vanadium traces in diesel fuels are the main fuel component in high temperature corrosion.
+During combustion, vanadium oxidizes and reacts with sodium and sulfur, yielding vanadate compounds with melting points as low as 530 °C, which attack the passivation layer on steel and render it susceptible to corrosion.
+The solid vanadium compounds also abrade engine components.

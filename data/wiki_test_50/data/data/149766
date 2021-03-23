@@ -1,0 +1,62 @@
+========,1,preface.
+Microsoft BASIC is the foundation product of the Microsoft company.
+It first appeared in 1975 as Altair BASIC, which was the first BASIC by Microsoft and the first high level programming language available for the Altair 8800 microcomputer.
+========,2,Altair BASIC and early microcomputers.
+The Altair BASIC interpreter was developed by Microsoft founders Paul Allen and Bill Gates with help from Monte Davidoff, using a self-made Intel 8080 software simulator running on a PDP-10 minicomputer.
+The dialect of BASIC is similar to Digital Equipment Corporation interpreters, especially in string operations, which vary between BASIC implementations.
+BASIC uses dynamically allocated strings which store their size.
+Some implementations of Microsoft BASIC support long variable names, but others do not.
+Altair BASIC was delivered on paper tape and in its original version took 4 KB of memory.
+The extended 8 KB version was then generalized into BASIC-80 (8080/85, Z80), and ported into BASIC-68 (6800), BASIC-69 (6809), and MOS Technology 6502-BASIC (unfortunately spilling over to 9 KB, in an era when 8 KB ROM chips were standard), as well as the 16-bit BASIC-86 (8086/88).
+The core command set and syntax is the same in all implementations of Microsoft BASIC and generally speaking, a program can be run on any version if it does not use hardware-specific features or double precision numbers (not supported in some implementations).
+========,2,Licenses to home computer makers.
+After the initial success of Altair BASIC, Microsoft BASIC became the basis for a lucrative software licensing business, being ported to the majority of the numerous home and other personal computers of the 1970s and especially the 1980s, and extended along the way.
+Contrary to the original Altair BASIC, most home computer BASICs are resident in ROM, and thus are available on the machines at power-on in the form of the characteristic "***codice***" prompt.
+Hence, Microsoft's and other variants of BASIC constitute a significant and visible part of the user interface of many home computers' rudimentary operating systems.
+By 1981 Microsoft BASIC was so popular that even companies that already had a BASIC licensed the language, such as IBM for its Personal Computer.
+IBM's Don Estridge said, "Microsoft BASIC had hundreds of thousands of users around the world.
+How are you going to argue with that?"
+Microsoft licensed similar versions to companies that competed with each other.
+After licensing BASICA to IBM, for example, Microsoft licensed the compatible GW-BASIC to makers of PC clones, and also sold copies to retail customers.
+The company similarly licensed an Applesoft-compatible BASIC to VTech for its Laser 128 clone.
+Variants were BASIC-80 and 8K BASIC 80.
+========,3,Disk BASIC-80.
+MBASIC is available for CP/M-80 and ISIS-II.
+Also available for TEKDOS.
+MBASIC is a stripped BASIC-80 with only hardware-neutral functions, however due to the popularity of CP/M, the vast majority of Z80 machines ran MBASIC rather than a version customized for specific hardware (TRS-80 BASIC was one of the few exceptions).
+========,3,BASIC-86.
+The first implementation as a standalone disk based language system was for Seattle Computer Products S-100 bus 8086 CPU card in 1979.
+It was utilizing an 8-bit FAT file system.
+Microsoft also offered a version of Standalone BASIC-86 for SBC-86/12 for Intel's 8086 Single Board Computer platform in 1980.
+========,3,Texas Instruments BASIC.
+This is the version of BASIC used on Texas Instruments' TI-99/4A computer line.
+Notably, it is not written in assembly language, but in a high level interpreter developed by TI.
+The reason for this was because Microsoft did not have any programmers who knew how to code for the TI-99/4A's 9900 CPU and so Texas Instruments instead gave them an interpreter to code in instead.
+The unfortunate effect of this was to make TI BASIC extremely slow due to being double-interpreted.
+In addition to the version included in the ROM of the TI-99/4A, Texas Instruments also developed Extended Disk BASIC for disk drive owners.
+========,3,6502 BASIC.
+Microsoft developed a ROM-based BASIC implementation for the MOS 6502 microprocessor in 1976, which began appearing in microcomputers starting with the OSI Model 500 and KIM-1 in 1977.
+This was available in two variants: a 8K variant supporting 6-digit floating point numbers, and a 9K variant supporting 9-digit floating point numbers.
+Three major versions were released by Microsoft (1.0, 1.1, 2.0), with certain licensees making their own changes later on.
+Standard features of Microsoft 6502 BASIC included:
+***LIST***.
+6502 BASIC was less standardized than BASIC-80, for example there were no standard commands to clear the screen, output to a printer, or manipulate disk files and these were entirely up to the OEM to add themselves.
+There is also no statement in 6502 BASIC to reseed the random number generator and the screen editor was also not standardized and varied widely with each implementation.
+***LIST***.
+========,3,BASIC-68 and BASIC-69.
+Microsoft catalogs from the 1980s also showed the availability of BASIC-68 and BASIC-69 for the Motorola 6800 and 6809 microprocessors respectively, running the FLEX operating systems, and also mention OEM versions for Perkin-Elmer, Ohio Nuclear, Pertec and Societe Occitane d'Electronique systems.
+It seems likely this is what is also the basis for the Microsoft/Epson BASIC in the Epson HX-20 portable computer, which has two Hitachi 6301 CPUs which are essentially a "souped up" 6801.
+Most of the core features in BASIC-68 and BASIC-69 were copied directly from BASIC-80.
+BASIC-69 was notably also licensed to Tandy where it formed the nucleus of TRS-80 CoCo BASIC.
+========,3,MSX.
+Microsoft produced a ROM-basedMSX BASIC for use in the MSX compatible home computers, using a Z80 processor.
+This version supported the graphics and sound systems of the MSX computers; some variants also had support for disk drives.
+========,2,Modern descendants.
+No variety of Microsoft BASIC (BASICA, GW-BASIC, QuickBasic, QBasic) is currently distributed with Microsoft Windows or DOS.
+However, versions which will still run on modern machines can be downloaded from various internet sites or be found on old DOS disks.
+The latest incarnation of Microsoft BASIC is Visual Basic .NET which incorporates some features from C++ and C# and can be used to develop web forms, Windows forms, console applications and server-based applications.
+Most .NET code samples are presented in VB.NET as well as C#, and VB.NET continues to be favored by former Visual Basic programmers.
+In October 2008, Microsoft released Small Basic.
+The language itself has only 14 keywords.
+Small Basic Version 1.0 (12 June 2011) was released with an updated Microsoft MSDN website that included a full teacher curriculum, a Getting Started Guide, and several e-books.
+Small Basic exists to help students as young as age eight learn the foundations of computer programming and then graduate to Visual Basic via the downloadable software, Visual Studio Express, where they can continue to build on the foundation by learning Visual C#, VB.NET, and Visual C++.

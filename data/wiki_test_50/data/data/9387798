@@ -1,0 +1,57 @@
+========,1,preface.
+The Lorenz beam was blind-landing radio navigation system developed by C. Lorenz AG in Berlin.
+The first system had been installed in 1932 at Berlin-Tempelhof Central Airport, followed by Dübendorf in Switzerland (1934) and others all over the world.
+The Lorenz company referred to it simply as the Ultrakurzwellen-Landefunkfeuer, German for "ultra-short-wave landing radio beacon", or LFF.
+Prior to the World War II the Germans had deployed the landing aid system at many Luftwaffe airfields in and outside Germany and equipped most of their bombers with the radio equipment needed to use it.
+The RAF continued using the system as late as 1955, under the name Standard Beam Approach (SBA).
+The basic idea behind the short-range LFF system was later developed into a long-range system for air navigation known as Elektra.
+Further development produced a system that worked over very long distances, hundreds or thousands of kilometres, known as Sonne (or often, Elektra-Sonnen) that allowed aircraft and U-Boats to take fixes far into the Atlantic.
+The British captured Sonne receivers and maps and started to use it for their own navigation under the name Consol.
+========,2,Description.
+The blind approach navigation system was developed starting in 1932 by Dr. Ernst Kramar of the Lorenz company.
+It was adopted by Deutsche Lufthansa in 1934 and sold around the world.
+The Lorenz company was founded in 1880 by Carl Lorenz and is now part of ITT.
+Lorenz used a single radio transmitter at 33,33 MHz (Anflugfunkfeuer) and three antennas placed in a line parallel to the end of the runway.
+The center antenna was always powered, while the other two were short circuited by a mechanical rotary switch turned by a simple motor.
+This resulted in a "kidney" shaped broadcast pattern centered on one of the two "side" antennas depending on which antenna had been short-circuited.
+The contacts on the switch were set so that one antenna was shorted for the time to be considered a "Dot" by a morse operator and the other as a "Dash".
+The signal could be detected for some distance off the end of the runway, as much as 30 km.
+The Lorenz obtained a sharper beam than could be created by an aerial array by having two lobes of signal.
+A pilot approaching the runway would tune his radio to the broadcast frequency and listen for the signal.
+If he heard a series of dots, he knew he was off the runway centerline to the left (the "dot-sector") and had to turn to the right to line up with the runway.
+If he was to the right, he would hear a series of dashes instead (the "dash-sector"), and turned left.
+The key to the operation of the system was an area in the middle where the two signals overlapped.
+The dots of the one signal "filled in" the dashes of the other, resulting in a steady tone known as the "equi-signal".
+By adjusting his path until he heard the equi-signal, the pilot could align his aircraft with the runway for landing.
+Two small marker beacons were also used: one 300 m off the end of runway, the "HEZ" (Haupteinflugzeichen), and another 3 km away, the "VEZ" (Voreinflugzeichen), both were broadcast on 38 MHz and modulated at 1700 and 700 Hz, respectively.
+These signals were broadcast directly upward, and would be heard briefly as the aircraft flew over them.
+To approach the runway, the pilot would fly to a published altitude and then use the main directional signals to line up with the runway and started flying toward it.
+When he flew over the VEZ he would start descending on a standard glide slope, continuing to land or abort at the HEZ depending on whether or not he could see the runway.
+Lorenz could fly a plane down a straight line with relatively high accuracy, enough so that the aircraft could then find the runway visually in all but the worst conditions.
+However it required a fairly constant monitoring of the radio by the pilot, who would often also be tasked with talking to the local control tower.
+In order to ease the workload, Lorenz later introduced a cockpit indicator that could listen to the signals and display the direction to the runway centerline as an arrow telling the pilot which direction to turn.
+The indicator also included two neon lamps to indicate when the aircraft crossed over each of the marker beacons.
+Later derivatives of the system had signals of equal length in the pattern left-right-silence, to operate a visual indicator in the cabin.
+The Lorenz system was similar to the Diamond-Dunmore equi-signal radio guidance system, developed by the US Bureau of Standards in the early 1930s.
+========,2,Use for blind bombing.
+In the Second World War the Lorenz beam principle was used by the German Luftwaffe as the basis of a number of blind bombing aids, notably Knickebein ('crooked leg') and the X-Gerät ('X-Apparatus'), in their bombing offensive against English cities during the winter of 1940/41.
+Knickebein was very similar to LFF, modifying it only slightly to be more highly directional and work over much longer distance.
+Using the same frequencies allowed their bombers to use the already-installed LFF receivers, although a second receiver was needed in order to pinpoint a single location.
+The X-Gerät involved cross-beams of the same characteristics but on different frequencies, which would both enable the pilot to calculate his speed (from the time between crossing the Fore Cross Signal and crossing the Main Cross Signal), and indicate when he should drop his payload.
+The calculation was performed by a mechanical computer.
+Lorenz modified this system to create the Viktoria/Hawaii lateral guidance system for the V-2 rocket.
+========,2,Allied jamming effort.
+When the British discovered the existence of the 'Knickebein' system, they rapidly jammed it, however the 'X-Gerät' was not successfully jammed for quite some time.
+A later innovation by the Germans was the 'Baedeker' or 'Taub' modification, which used supersonic modulation.
+This was so quickly jammed that the Germans practically gave up on the use of beam-bombing systems, with the exception of the 'FuGe 25A', which operated for a short time towards the end of Operation Steinbock, known as the "Baby Blitz".
+A further operational drawback of the system was that bombers had to follow a fixed course between the beam transmitter station and the target; once the beam had been detected, defensive measures were made more effective by knowledge of the course.
+========,2,Sonne/Consol.
+'Sonne' (Eng.
+'Sun') was a derivation of Lorenz used by the Luftwaffe for long-range navigation out over the Atlantic using transmitters in Occupied Europe, and another in neutral Spain, and after its existence had been discovered by the British, under the direction of R. V. Jones it was allowed to continue in use, un-jammed, because it was felt that it was actually more useful to RAF Coastal Command than it was to the Germans.
+In British use the German system was named 'Consol', and it remained un-jammed for the period of the war.
+========,2,Sonne/Consol after World War II.
+The long range version developed by the Germans during the war was used by many countries for civilian purposes after the war, mostly under its English name Consol.
+Transmitters were installed in the US, the UK and the USSR.
+========,2,Technical considerations.
+The reason the Lorenz beam principle was necessary, with its overlapping beams, was because the sharpness of a beam increases approximately logarithmically with the length of the aerial array with which it is generated.
+A law of diminishing returns operates, such that to attain the sharpness achieved by the Lorenz system with a single beam (approximately 1 mile wide over a range of two hundred miles), an array of prohibitive size would be required.
