@@ -84,3 +84,6 @@ This script extract the most important n sentences from each segment, so as to g
 
 ### semantic_search.py
 This script is the same as summarize.py, but instead of returning the top sentences per segment it averages them and compare to a query input by the user (a prompt asks for it when the script is called), so as to return the segment that is the most similar to the query. In this case then the -nt parameter specifies how many sentences are averaged to represent each segment, whereas a very large number will result in all the sentences be averaged and, usually, better performance (but slightly longer runtime).
+
+
+N.B. Please note that the script for segmentation will need to download the sentence encoders the first time in which it is run with a specific encoder and this might take a while. Subsequent uses with the same encoder, instead, should run faster. 
