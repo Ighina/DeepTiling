@@ -12,7 +12,6 @@ tensorboard_logger
 tensorflow
 tensorflow_hub
 termcolor
-time
 torch
 tqdm>=4.40.2
 transformers
