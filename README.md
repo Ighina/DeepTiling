@@ -97,3 +97,8 @@ python fit.py --training_data location_of_the_data_used_to_find_optimal_paramete
 ```
 
 N.B. Please note that the script for segmentation will need to download the sentence encoders the first time in which it is run with a specific encoder and this might take a while. Subsequent uses with the same encoder, instead, should run faster. 
+
+# References
+The current repository is modelled after [https://github.com/koomri/text-segmentation] and so are the scripts for manipulating the data.
+TopicTiling and TextTiling implementations are made after the originale papers, as referenced in the accompanying paper.
+If I am missing any reference or for any problem with the repository, please feel free to contact me.
