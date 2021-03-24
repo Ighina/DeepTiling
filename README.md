@@ -3,8 +3,7 @@ A TextTiling-based algorithm for text segmentation (aka topic segmentation) that
 
 # Running the Program
 ## Setting up the workspace and download required libraries
-
-Download this repository, unzip it and move the working directory into it.
+Move your working directory into this repository after having cloned or otherwise downloaded it.
 
 To download the required libraries, either pip can be used directly to install them on the python installation of the current environment, or a virtual environment can be created with conda. The current installation assumes no GPU available by default: to install pytorch with GPU, refer to [this page](https://pytorch.org/get-started/locally/). Also, if using GPU and you want to use Universal Sentence Encoder, than you will need to install tensorflow-gpu by running the following in the environment created as explained below:
 ```
