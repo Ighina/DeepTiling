@@ -12,7 +12,7 @@ import argparse
 import shutil
 import sys
 import os
-import segment
+import segment as seg
 
 def main(args):
 
@@ -20,7 +20,7 @@ def main(args):
     
     
     if not os.path.exists(os.path.join(out_directory, 'segments')):
-        segment.main(args)
+        seg.main(args)
     
     if os.path.exists(os.path.join(out_directory, 'summaries')):
         overwrite = input(bool('The summaries directory inside {} folder already conatains material:\ndo you want to overwrite the content in {}/summaries?\nEnter anything for yes or nothing for no...'.format(out_directory)))
