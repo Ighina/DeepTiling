@@ -3,6 +3,8 @@
 Created on Mon Feb 15 15:08:08 2021
 
 @author: Iacopo
+
+All code related to the C99 algorithm is taken from https://github.com/intfloat/uts
 """
 from transformers import BertTokenizer, BertForNextSentencePrediction
 import torch
@@ -19,6 +21,38 @@ from sklearn.metrics import f1_score, precision_score, recall_score
 from sklearn.decomposition import PCA
 from umap import UMAP
 import time
+import os
+
+class Region:
+    """
+    Used to denote a rectangular region of similarity matrix,
+    never instantiate this class outside the package.
+    """
+    def __init__(self, l, r, sm_matrix):
+        assert(r >= l)
+        self.tot = sm_matrix[l][r]
+        self.l = l
+        self.r = r
+        self.area = (r - l + 1)**2
+        self.lch, self.rch, self.best_pos = None, None, -1
+
+    def split(self, sm_matrix):
+        if self.best_pos >= 0:
+            return
+        if self.l == self.r:
+            self.best_pos = self.l
+            return
+        assert(self.r > self.l)
+        mx, pos = -1e9, -1
+        for i in range(self.l, self.r):
+            carea = (i - self.l + 1)**2 + (self.r - i)**2
+            cur = (sm_matrix[self.l][i] + sm_matrix[i + 1][self.r]) / carea
+            if cur > mx:
+                mx, pos = cur, i
+        assert(pos >= self.l and pos < self.r)
+        self.lch = Region(self.l, pos, sm_matrix)
+        self.rch = Region(pos + 1, self.r, sm_matrix)
+        self.best_pos = pos
 
 def get_model(model_name, nxt_sentence_prediction = False):
     
@@ -50,11 +84,28 @@ class DeepTiling:
         
         self.encoder, self.tokenizer = get_model(encoding_model,
                                                  nxt_sentence_prediction)
+        
+        self.encoder_name = encoding_model
+                                                 
+                                                 
+    def precompute_embeddings(self, docs, dataset_name = 'Choi', parent_directory = 'embeddings'):
+        out_dir = os.path.join(parent_directory, dataset_name, self.encoder_name)
+            
+        if os.path.exists(out_dir):
+            assert len(os.listdir(out_dir))==0, 'The folder where to save the embeddings is not empty: if you want to save your embeddings first make sure that the folder {} is empty'.format(out_dir)
+        else:
+            os.makedirs(out_dir)
+        
+        for index, sentences in enumerate(docs):
+            embedding = self.encoder.encode(sentences)
+            np.save(os.path.join(out_dir, 'embeddings_'+str(index)), embedding)
+                
     
     def compute_depth_score(self, sentences, window, clip = 2, 
                         single = False,
                         next_sentence_pred = False, tokenizer = None,
-                        next_sentence_model = None, use_softmax = False):
+                        next_sentence_model = None, use_softmax = False,
+                        smooth = False):
         
         scores = []
         if single:
@@ -117,9 +168,117 @@ class DeepTiling:
                     break
             depth_scores[index] = 1/2*(lpeak + rpeak - 2 * gapscore)
             index += 1
+            
+        if smooth:
+            n = len(depth_scores)
+            smooth_dep_score = [0 for _ in range(n)]
+            for i in range(n):
+                if i - 1 < 0 or i + 1 >= n:
+                    smooth_dep_score[i] = depth_scores[i]
+                else:
+                    smooth_dep_score[i] = np.average(depth_scores[(i - 1):(i + 2)])
+            depth_scores = smooth_dep_score
       
         return scores, depth_scores
-    
+        
+    def C99(self, sentences, std_coeff = 1.2, window = 4, transform_rank = False):
+        assert len(sentences) > 0
+        if len(sentences) < 3:
+            return [1] + [0 for _ in range(len(sentences) - 1)]
+            
+        n = len(sentences)
+        self.window = min(window, n)
+        
+        self.sim = cosine_similarity(sentences)
+        if transform_rank:
+            self.rank = np.zeros((n, n))
+            for i in range(n):
+                for j in range(i, n):
+                    r1 = max(0, i - self.window + 1)
+                    r2 = min(n - 1, i + self.window - 1)
+                    c1 = max(0, j - self.window + 1)
+                    c2 = min(n - 1, j + self.window - 1)
+                    sublist = self.sim[r1:(r2 + 1), c1:(c2+1)].flatten()
+                    lowlist = [x for x in sublist if x < self.sim[i][j]]
+                    self.rank[i][j] = 1.0 * len(lowlist) / ((r2 - r1 + 1) * (c2 - c1 + 1))
+                    self.rank[j][i] = self.rank[i][j]
+        else:
+            self.rank = self.sim
+            
+        self.sm = np.zeros((n, n))
+        # O(n^4) solution
+        # for i in xrange(n):
+        #     for j in xrange(i, n):
+        #         self.sm[i][j] = sum(self.rank[i:(j + 1), i:(j + 1)].flatten())
+        #         self.sm[j][i] = self.sm[i][j]
+        # O(n^2) solution
+        prefix_sm = np.zeros((n, n))
+        for i in range(n):
+            for j in range(n):
+                prefix_sm[i][j] = self.rank[i][j]
+                if i - 1 >= 0: prefix_sm[i][j] += prefix_sm[i - 1][j]
+                if j - 1 >= 0: prefix_sm[i][j] += prefix_sm[i][j - 1]
+                if i - 1 >= 0 and j - 1 >= 0: prefix_sm[i][j] -= prefix_sm[i - 1][j - 1]
+        for i in range(n):
+            for j in range(i, n):
+                if i == 0:
+                    self.sm[i][j] = prefix_sm[j][j]
+                else:
+                    self.sm[i][j] = prefix_sm[j][j] - prefix_sm[i - 1][j] \
+                                    - prefix_sm[j][i - 1] + prefix_sm[i - 1][i - 1]
+                self.sm[j][i] = self.sm[i][j]
+
+        # step 4, determine boundaries
+        D = 1.0 * self.sm[0][n - 1] / (n * n)
+        darr, region_arr, idx = [D], [Region(0, n - 1, self.sm)], []
+        sum_region, sum_area = float(self.sm[0][n - 1]), float(n * n)
+        for i in range(n - 1):
+            mx, pos = -1e9, -1
+            for j, region in enumerate(region_arr):
+                if region.l == region.r:
+                    continue
+                region.split(self.sm)
+                den = sum_area - region.area + region.lch.area + region.rch.area
+                cur = (sum_region - region.tot + region.lch.tot + region.rch.tot) / den
+                if cur > mx:
+                    mx, pos = cur, j
+            assert(pos >= 0)
+            tmp = region_arr[pos]
+            region_arr[pos] = tmp.rch
+            region_arr.insert(pos, tmp.lch)
+            sum_region += tmp.lch.tot + tmp.rch.tot - tmp.tot
+            sum_area += tmp.lch.area + tmp.rch.area - tmp.area
+            darr.append(sum_region / sum_area)
+            idx.append(tmp.best_pos)
+
+        dgrad = [(darr[i + 1] - darr[i]) for i in range(len(darr) - 1)]
+
+        # optional step, smooth gradient
+        smooth_dgrad = [dgrad[i] for i in range(len(dgrad))]
+        if len(dgrad) > 1:
+            smooth_dgrad[0] = (dgrad[0] * 2 + dgrad[1]) / 3.0
+            smooth_dgrad[-1] = (dgrad[-1] * 2 + dgrad[-2]) / 3.0
+        for i in range(1, len(dgrad) - 1):
+            smooth_dgrad[i] = (dgrad[i - 1] + 2 * dgrad[i] + dgrad[i + 1]) / 4.0
+        dgrad = smooth_dgrad
+
+        avg, stdev = np.average(dgrad), np.std(dgrad)
+        cutoff = avg + std_coeff * stdev
+        assert(len(idx) == len(dgrad))
+        above_cutoff_idx = [i for i in range(len(dgrad)) if dgrad[i] >= cutoff]
+        if len(above_cutoff_idx) == 0: boundary = []
+        else: boundary = idx[:max(above_cutoff_idx) + 1]
+        ret = [0 for _ in range(n)]
+        for i in boundary:
+            ret[i-1] = 1
+            # boundary should not be too close
+            for j in range(i - 2, i + 2):
+                if j >= 0 and j < n and j != (i-1) and ret[j] == 1:
+                    ret[i-1] = 0
+                    break
+        return [1] + ret[:-1]
+        
+            
     def compute_boundaries(self, depth_scores, threshold = 'default', 
                            postprocess = True, clip = 2, number_of_segments = None):
         if number_of_segments is not None:
@@ -193,7 +352,7 @@ class DeepTiling:
             pca = False, n_components = 30,
             umap = False, n_neighbors = 15,
             use_softmax = False,
-            tune_on = 'Pk'):
+            tune_on = 'Pk', from_precomputed = False):
         
         model = self.encoder
         tokenizer = self.tokenizer
@@ -230,8 +389,11 @@ class DeepTiling:
                 recall = []
                 times = []
                 index = 0
-                for doc in dataset:
+                for index, doc in enumerate(dataset):
                   sentences, true_lab, path = doc
+                  path = os.normpath(path) # normalize path to the current file
+                  dataset_name = path.split(os.sep)[1] # assume that the second directory in the path is the name of the dataset being used
+                  
           
                   if sentences:
                     if timer:
@@ -254,7 +416,10 @@ class DeepTiling:
                           else:
                             embs.append(model.encode(' '.join(sentences[index-window+1:index+1])))
                         embs = np.array(embs)
-                      
+                      elif from_precomputed:
+                          filename = os.path.join('embeddings', dataset_name, self.encoder_name, 'embeddings_'+str(index)+'.npy')
+                          assert os.path.exists(filename), 'path to file {} does not exist: have you precomputed the embeddings? If not, set the "from_precomputed" option to False'.format(filename)
+                          embs = np.load(filename)
                       else:
                         embs = model.encode(sentences)
                       if pca or umap:
@@ -351,7 +516,12 @@ class DeepTiling:
                 multi_encode = False, 
                 pca = False, pca_components = None,
                 use_softmax = False,
-                number_of_segments = None):
+                number_of_segments = None,
+                smooth = False,
+                C99 = False,
+                C99_std_coeff = 1.2,
+                C99_rank_transform = False,
+                precomputed_filename = None):
         
         model = self.encoder
         tokenizer = self.tokenizer
@@ -387,6 +557,7 @@ class DeepTiling:
                                                          tokenizer = tokenizer,
                                                          use_softmax = use_softmax,
                                                          number_of_segments = None)
+                                                        
             else:
               if multi_encode:
                 embs = []
@@ -397,7 +568,8 @@ class DeepTiling:
                   else:
                     embs.append(model.encode(' '.join(sentences[index-window+1:index+1])))
                 embs = np.array(embs)
-              
+              elif precomputed_filename is not None:
+                embs = np.load(precomputed_filename)
               else:
                 embs = model.encode(sentences)
               if pca:
@@ -419,14 +591,20 @@ class DeepTiling:
                         embs = pca_obj.fit_transform(embs)
               
               embs = pd.DataFrame(embs)
+              
+              if C99:
+                  boundaries = np.array(self.C99(embs, std_coeff = C99_std_coeff, window = window, 
+                  transform_rank = C99_rank_transform))
+                  
   
               scores, depth_scores = self.compute_depth_score(embs, 
                                                               window = window, 
                                                               clip=clip,
-                                                              single = multi_encode)
+                                                              single = multi_encode,
+                                                              smooth = smooth)
   
-            
-            boundaries = self.compute_boundaries(depth_scores, threshold=(np.mean(depth_scores) +
+            if not C99:
+                boundaries = self.compute_boundaries(depth_scores, threshold=(np.mean(depth_scores) +
                                             np.std(depth_scores)*threshold), number_of_segments = number_of_segments)
             
             if timer:
@@ -448,8 +626,13 @@ class DeepTiling:
         
         segments.append(sentences[last_index:])
         segmented_embs.append(embs.iloc[last_index:].values)
-        
-        return {'segments': segments, 
-                'boundaries': boundaries,
-                'depth_scores': depth_scores,
-                'embeddings': segmented_embs}
+        if C99:
+            return {'segments': segments, 
+                    'boundaries': boundaries,
+                    'similarity_matrix': self.rank,
+                    'embeddings': segmented_embs}
+        else:
+            return {'segments': segments, 
+                    'boundaries': boundaries,
+                    'depth_scores': depth_scores,
+                    'embeddings': segmented_embs}
