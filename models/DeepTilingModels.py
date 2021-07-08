@@ -595,15 +595,14 @@ class DeepTiling:
               if C99:
                   boundaries = np.array(self.C99(embs, std_coeff = C99_std_coeff, window = window, 
                   transform_rank = C99_rank_transform))
-                  
   
-              scores, depth_scores = self.compute_depth_score(embs, 
+            if not C99:
+                scores, depth_scores = self.compute_depth_score(embs, 
                                                               window = window, 
                                                               clip=clip,
                                                               single = multi_encode,
                                                               smooth = smooth)
-  
-            if not C99:
+                
                 boundaries = self.compute_boundaries(depth_scores, threshold=(np.mean(depth_scores) +
                                             np.std(depth_scores)*threshold), number_of_segments = number_of_segments)
             
