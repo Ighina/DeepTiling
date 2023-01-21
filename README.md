@@ -81,6 +81,19 @@ A description of all the options can be accessed as described above. The main ar
 - -od: the directory where to store the results. Default is results. If any other name is passed, the programme will create the folder and, inside, will create a segments folder where to store the segmentation results and an embeddings folder where to store the computed sentence embeddings.
 - -cat: whether to concatenate all the provided documents in a single document or not. Default is False.
 
+#### Input Structure
+The argument to the -data parameter above should be the path to a folder containing the documents to be segmented. The documents should be text documents (no specific extension required, but .txt files would do just fine).
+For example, if you have a collection of documents in "folder1":
+```
+python segment.py -data folder1 -wd 10 -th 1.5
+```
+With folder1:
+- folder1:
+  - textfile1.txt
+  - textfile2.txt
+  - textfile3.txt
+  etc.
+
 ### summarize.py
 This script extract the most important n sentences from each segment, so as to give a summary of the segment itself. The algorithm uses LexRank: please look at the relative github page quoted in the LexRank script for further details on that. If the input documents haven't been segmented yet when this script is called, the segmentation process defined in segment.py will run automatically. Therefore, all arguments are the same as segment.py but for the argument -nt specifying the number of sentences to extract (default is 1).
 
