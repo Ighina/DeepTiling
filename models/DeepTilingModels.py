@@ -23,6 +23,9 @@ from umap import UMAP
 import time
 import os
 
+def create_sentence_pair(sentences):
+  return ([s for s in sentences[:-1]]+["none"], ["none"]+[s for s in sentences[1:]])
+
 class Region:
     """
     Used to denote a rectangular region of similarity matrix,
