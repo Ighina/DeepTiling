@@ -315,15 +315,15 @@ class DeepTiling:
         reference = ''.join(ground_truth.astype(int).astype(str).tolist())
         if isinstance(window_size, int):
           if segval:
-            result = segeval.pk(segeval.convert_nltk_to_masses(hypothesis, boundary_symbol=boundary_symb)[:-1],
-                      segeval.convert_nltk_to_masses(reference, boundary_symbol=boundary_symb)[:-1],
+            result = segeval.pk(segeval.convert_nltk_to_masses(hypothesis, boundary_symbol=boundary_symb),
+                      segeval.convert_nltk_to_masses(reference, boundary_symbol=boundary_symb),
                       window_size = window_size)
           else:
             result = pk(reference, hypothesis, window_size)
         else:
           if segval:
-            result = segeval.pk(segeval.convert_nltk_to_masses(hypothesis, boundary_symbol=boundary_symb)[:-1],
-                      segeval.convert_nltk_to_masses(reference, boundary_symbol=boundary_symb)[:-1])
+            result = segeval.pk(segeval.convert_nltk_to_masses(hypothesis, boundary_symbol=boundary_symb),
+                      segeval.convert_nltk_to_masses(reference, boundary_symbol=boundary_symb))
           else:
             result = pk(reference, hypothesis)
         return result
